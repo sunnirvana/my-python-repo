@@ -1,3 +1,7 @@
+# Doc Desc
+# 多重继承实现样例
+
+
 class Person(object):
     def __init__(self):
         print("Person init")

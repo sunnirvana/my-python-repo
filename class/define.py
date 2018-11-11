@@ -1,3 +1,6 @@
+# Doc Desc
+# 类定义样例
+
 import types
 
 

@@ -1,14 +1,19 @@
+# Doc Desc
+# pprint, Pretty Print, 输出更美观 https://docs.python.org/3/library/pprint.html
+# 本代码用于测试多重继承后, 对属性的操作, SubClass继承自BaseClass,TimesTwo, PlusFive
+# 在SubClass的__init__中分别调用三个父类的__init__, 利用TimesTwo和PlusFive修改BaseClass中定义的属性
+
 from pprint import pprint
 
 
-class BaseClass(object):
+class BaseClass():
     def __init__(self, value):
         self.value = value
         print('Init BaseClass')
         print('value is ', self.value)
 
 
-class TimesTwo(object):
+class TimesTwo():
     def __init__(self):
         self.value *= 2
         print('Init TimesTwo')

@@ -1,3 +1,7 @@
+# Doc Desc
+# 使用property关键字(decorator)定义属性
+
+
 class Student(object):
 
     def __init__(self, name, score):
@@ -30,10 +34,14 @@ class Student(object):
 
 
 s = Student('Bob', 59)
-print(s.grade)
-
+print('source: %s, grade: %s' % (s.score, s.grade))
 s.score = 60
-print(s.grade)
-
+print('source: %s, grade: %s' % (s.score, s.grade))
 s.score = 99
-print(s.grade)
+print('source: %s, grade: %s' % (s.score, s.grade))
+
+try:
+    # grade 是只读属性, 不能赋值, 如下操作会报错误
+    s.grade = 'D'
+except AttributeError:
+    print('s.grade = "D" raise Error: ', AttributeError)
