@@ -1,5 +1,16 @@
+"""[summary]
+    测试 special method (特殊方法)
+        __str__(self) 显示类信息给用户
+        __repr__(self) 显示类信息给开发人员
+        __lt__(self, other) 比较 self 是否小于 other
+        __eq__(self, other) 比较 self 是否等于 other
+
+Returns:
+    [type] -- [description]
+    None
+"""
+
 from functools import total_ordering
-# Python 定义了__str__()和__repr__()两种方法，__str__()用于显示给用户，而__repr__()用于显示给开发人员。
 
 
 class Person(object):
