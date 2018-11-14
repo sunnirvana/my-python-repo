@@ -1,3 +1,13 @@
+"""[summary]
+
+Raises:
+    测试logging用法
+    import logging
+    logging.warn/debug/info/...
+
+Returns:
+    [type] -- [description]
+"""
 import logging
 
 
