@@ -1,0 +1,11 @@
+WARNING:root:I am warning
+ERROR:root:I am error
+ERROR:root:
+Traceback (most recent call last):
+  File "/Users/SunYubo/Workspace/Learning/python/error/logging_usage.py", line 42, in main
+    bar('0')
+  File "/Users/SunYubo/Workspace/Learning/python/error/logging_usage.py", line 31, in bar
+    return foo(s) * 2
+  File "/Users/SunYubo/Workspace/Learning/python/error/logging_usage.py", line 26, in foo
+    raise ZeroDivisionError
+ZeroDivisionError
