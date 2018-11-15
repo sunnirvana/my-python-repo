@@ -1,5 +1,5 @@
 """[summary]
-    试用assert
+    使用assert
 Returns:
     [type] -- [description]
 """
