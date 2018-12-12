@@ -1,0 +1,5 @@
+total 32
+-rw-r--r--  1 sunyubo  staff    252 11 26 14:19 do_folk.py
+-rw-r--r--  1 sunyubo  staff      0 12  1 17:46 err.txt
+-rw-r--r--  1 sunyubo  staff      0 12  1 17:46 out.txt
+-rw-r--r--  1 sunyubo  staff  10537 12  1 17:44 多进程.ipynb
