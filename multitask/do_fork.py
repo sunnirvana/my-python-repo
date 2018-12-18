@@ -11,3 +11,12 @@ if pid == 0:
 else:
     # pid != 0 ==> in parent process, and pid is the child process
     print('i just created child process (%s), my pid is %s' % (pid, os.getpid()))
+
+print("Process (%s) start..." % os.getpid())
+
+pid = os.fork()
+if pid == 0:
+    print("I am child process %s, my partent is %s" %
+          (os.getpid(), os.getppid()))
+else:
+    print("I (%s) just created a child process %s" % (os.getpid(), pid))
