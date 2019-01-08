@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+import base64
+import os
+import shutil
+import do_gzip
+from ..utils.common import get_file_md5
+
+
+def bin2b64c(binary):
+    try:
+        with open(binary, 'rb') as fp:
+            b64str = base64.b64encode(fp.read())
+        return b64str
+    except Exception as e:
+        raise (e)
+
+
+def b64c2bin(b64c_file):
+    try:
+        with open(b64c_file, 'rb') as fp:
+            b64code = fp.read()
+            ori_data = bytes(str(b64code).split('@')[-1], encoding='utf-8')
+            data = base64.b64decode(ori_data)
+            return data
+    except Exception as e:
+        raise (e)
+
+
+if __name__ == '__main__':
+
+    file_bin = './inst.wk'
+    print('bin file: %s (md5: %s)', file_bin, get_file_md5(file_bin))
+
+    file_bin_str = './inst.str'
+    with open(file_bin_str, 'wb') as f:
+        f.write(bin2b64c(file_bin))
+    print('bin -> str file: %s (md5: %s)', file_bin_str, get_file_md5(file_bin_str))
+
+    file_bin_str_bin = './inst.str.bin'
+    with open(file_bin_str_bin, 'wb') as f:
+        f.write(b64c2bin())
