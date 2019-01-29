@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 import base64
 import os
-import shutil
-import do_gzip
-from common import get_file_md5
+from .common import get_file_md5
 
 
 def bin2b64c(binary):
@@ -16,7 +14,7 @@ def bin2b64c(binary):
             print('head 6 bytes: %s, tail 6 bytes: %s', b64str[:6], b64str[-6:])
             return b64str
     except Exception as e:
-        raise (e)
+        raise e
 
 
 def b64c2bin_o(b64code):
@@ -26,7 +24,7 @@ def b64c2bin_o(b64code):
         data = base64.b64decode(ori_data)
         return data
     except Exception as e:
-        raise (e)
+        raise e
 
 
 def b64c2bin_f(b64c_file):
@@ -41,7 +39,7 @@ def b64c2bin_f(b64c_file):
             print('<str2bin>: data bin len: %s' % (len(data)))
             return data
     except Exception as e:
-        raise (e)
+        raise e
 
 
 def echo(process, file):
@@ -60,7 +58,8 @@ if __name__ == '__main__':
         f.write(data)
     echo('bin -> str', file_bin_str)
 
-    from do_gzip import gzip_file, ungzip_file
+    from .do_gzip import gzip_file, ungzip_file
+
     file_bin_str_gzip = os.path.join(path, 'inst.wk.str.gzip')
     gzip_file(file_bin_str, file_bin_str_gzip)
     echo('bin -> str -> gzip', file_bin_str_gzip)

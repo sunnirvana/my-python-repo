@@ -31,6 +31,6 @@ list.remove(2)
 print(list)
 try:
     list.remove(10)
-except:
-    print('error')
+except Exception as e:
+    print('error', e)
 print(list)
