@@ -1,7 +1,7 @@
 # Doc Desc
 # 简单继承样例, 及多态
 
-from define import Person
+from .definition import Person
 
 
 class Teacher(Person):
